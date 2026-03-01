@@ -1,0 +1,112 @@
+[2026-03-01T14:15:25.124+0530] {processor.py:186} INFO - Started process (PID=213243) to work on /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/example_datasets.py
+[2026-03-01T14:15:25.125+0530] {processor.py:914} INFO - Processing file /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/example_datasets.py for tasks to queue
+[2026-03-01T14:15:25.127+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:25.127+0530] {dagbag.py:588} INFO - Filling up the DagBag from /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/example_datasets.py
+[2026-03-01T14:15:25.140+0530] {processor.py:925} INFO - DAG(s) 'consume_1_and_2_with_dataset_expressions', 'dataset_consumes_1_never_scheduled', 'dataset_produces_1', 'consume_1_or_both_2_and_3_with_dataset_expressions', 'dataset_consumes_unknown_never_scheduled', 'dataset_consumes_1_and_2', 'dataset_produces_2', 'consume_1_or_2_with_dataset_expressions', 'dataset_consumes_1', 'conditional_dataset_and_time_based_timetable' retrieved from /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/example_datasets.py
+[2026-03-01T14:15:25.228+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:25.228+0530] {override.py:1932} INFO - Created Permission View: can read on DAG:consume_1_and_2_with_dataset_expressions
+[2026-03-01T14:15:25.241+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:25.241+0530] {override.py:1932} INFO - Created Permission View: can delete on DAG:consume_1_and_2_with_dataset_expressions
+[2026-03-01T14:15:25.251+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:25.251+0530] {override.py:1932} INFO - Created Permission View: can edit on DAG:consume_1_and_2_with_dataset_expressions
+[2026-03-01T14:15:25.268+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:25.268+0530] {override.py:1932} INFO - Created Permission View: can read on DAG Run:consume_1_and_2_with_dataset_expressions
+[2026-03-01T14:15:25.278+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:25.277+0530] {override.py:1932} INFO - Created Permission View: menu access on DAG Run:consume_1_and_2_with_dataset_expressions
+[2026-03-01T14:15:25.288+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:25.288+0530] {override.py:1932} INFO - Created Permission View: can create on DAG Run:consume_1_and_2_with_dataset_expressions
+[2026-03-01T14:15:25.298+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:25.297+0530] {override.py:1932} INFO - Created Permission View: can delete on DAG Run:consume_1_and_2_with_dataset_expressions
+[2026-03-01T14:15:25.318+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:25.317+0530] {override.py:1932} INFO - Created Permission View: can read on DAG:dataset_consumes_1_never_scheduled
+[2026-03-01T14:15:25.327+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:25.327+0530] {override.py:1932} INFO - Created Permission View: can delete on DAG:dataset_consumes_1_never_scheduled
+[2026-03-01T14:15:25.338+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:25.337+0530] {override.py:1932} INFO - Created Permission View: can edit on DAG:dataset_consumes_1_never_scheduled
+[2026-03-01T14:15:25.356+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:25.356+0530] {override.py:1932} INFO - Created Permission View: can read on DAG Run:dataset_consumes_1_never_scheduled
+[2026-03-01T14:15:25.369+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:25.368+0530] {override.py:1932} INFO - Created Permission View: menu access on DAG Run:dataset_consumes_1_never_scheduled
+[2026-03-01T14:15:25.380+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:25.380+0530] {override.py:1932} INFO - Created Permission View: can create on DAG Run:dataset_consumes_1_never_scheduled
+[2026-03-01T14:15:25.391+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:25.391+0530] {override.py:1932} INFO - Created Permission View: can delete on DAG Run:dataset_consumes_1_never_scheduled
+[2026-03-01T14:15:25.411+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:25.411+0530] {override.py:1932} INFO - Created Permission View: can read on DAG:dataset_produces_1
+[2026-03-01T14:15:25.421+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:25.420+0530] {override.py:1932} INFO - Created Permission View: can delete on DAG:dataset_produces_1
+[2026-03-01T14:15:25.430+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:25.430+0530] {override.py:1932} INFO - Created Permission View: can edit on DAG:dataset_produces_1
+[2026-03-01T14:15:25.447+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:25.446+0530] {override.py:1932} INFO - Created Permission View: can read on DAG Run:dataset_produces_1
+[2026-03-01T14:15:25.456+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:25.456+0530] {override.py:1932} INFO - Created Permission View: menu access on DAG Run:dataset_produces_1
+[2026-03-01T14:15:25.466+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:25.465+0530] {override.py:1932} INFO - Created Permission View: can create on DAG Run:dataset_produces_1
+[2026-03-01T14:15:25.476+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:25.476+0530] {override.py:1932} INFO - Created Permission View: can delete on DAG Run:dataset_produces_1
+[2026-03-01T14:15:25.495+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:25.495+0530] {override.py:1932} INFO - Created Permission View: can read on DAG:consume_1_or_both_2_and_3_with_dataset_expressions
+[2026-03-01T14:15:25.505+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:25.505+0530] {override.py:1932} INFO - Created Permission View: can delete on DAG:consume_1_or_both_2_and_3_with_dataset_expressions
+[2026-03-01T14:15:25.514+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:25.514+0530] {override.py:1932} INFO - Created Permission View: can edit on DAG:consume_1_or_both_2_and_3_with_dataset_expressions
+[2026-03-01T14:15:25.531+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:25.531+0530] {override.py:1932} INFO - Created Permission View: can read on DAG Run:consume_1_or_both_2_and_3_with_dataset_expressions
+[2026-03-01T14:15:25.542+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:25.541+0530] {override.py:1932} INFO - Created Permission View: menu access on DAG Run:consume_1_or_both_2_and_3_with_dataset_expressions
+[2026-03-01T14:15:25.551+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:25.551+0530] {override.py:1932} INFO - Created Permission View: can create on DAG Run:consume_1_or_both_2_and_3_with_dataset_expressions
+[2026-03-01T14:15:25.561+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:25.561+0530] {override.py:1932} INFO - Created Permission View: can delete on DAG Run:consume_1_or_both_2_and_3_with_dataset_expressions
+[2026-03-01T14:15:25.581+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:25.580+0530] {override.py:1932} INFO - Created Permission View: can read on DAG:dataset_consumes_unknown_never_scheduled
+[2026-03-01T14:15:25.590+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:25.590+0530] {override.py:1932} INFO - Created Permission View: can delete on DAG:dataset_consumes_unknown_never_scheduled
+[2026-03-01T14:15:25.600+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:25.600+0530] {override.py:1932} INFO - Created Permission View: can edit on DAG:dataset_consumes_unknown_never_scheduled
+[2026-03-01T14:15:25.616+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:25.616+0530] {override.py:1932} INFO - Created Permission View: can read on DAG Run:dataset_consumes_unknown_never_scheduled
+[2026-03-01T14:15:25.627+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:25.626+0530] {override.py:1932} INFO - Created Permission View: menu access on DAG Run:dataset_consumes_unknown_never_scheduled
+[2026-03-01T14:15:25.649+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:25.649+0530] {override.py:1932} INFO - Created Permission View: can create on DAG Run:dataset_consumes_unknown_never_scheduled
+[2026-03-01T14:15:25.659+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:25.659+0530] {override.py:1932} INFO - Created Permission View: can delete on DAG Run:dataset_consumes_unknown_never_scheduled
+[2026-03-01T14:15:25.679+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:25.678+0530] {override.py:1932} INFO - Created Permission View: can read on DAG:dataset_consumes_1_and_2
+[2026-03-01T14:15:25.688+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:25.688+0530] {override.py:1932} INFO - Created Permission View: can delete on DAG:dataset_consumes_1_and_2
+[2026-03-01T14:15:25.699+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:25.699+0530] {override.py:1932} INFO - Created Permission View: can edit on DAG:dataset_consumes_1_and_2
+[2026-03-01T14:15:25.716+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:25.715+0530] {override.py:1932} INFO - Created Permission View: can read on DAG Run:dataset_consumes_1_and_2
+[2026-03-01T14:15:25.727+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:25.726+0530] {override.py:1932} INFO - Created Permission View: menu access on DAG Run:dataset_consumes_1_and_2
+[2026-03-01T14:15:25.739+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:25.739+0530] {override.py:1932} INFO - Created Permission View: can create on DAG Run:dataset_consumes_1_and_2
+[2026-03-01T14:15:25.753+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:25.753+0530] {override.py:1932} INFO - Created Permission View: can delete on DAG Run:dataset_consumes_1_and_2
+[2026-03-01T14:15:25.774+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:25.774+0530] {override.py:1932} INFO - Created Permission View: can read on DAG:dataset_produces_2
+[2026-03-01T14:15:25.784+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:25.784+0530] {override.py:1932} INFO - Created Permission View: can delete on DAG:dataset_produces_2
+[2026-03-01T14:15:25.793+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:25.793+0530] {override.py:1932} INFO - Created Permission View: can edit on DAG:dataset_produces_2
+[2026-03-01T14:15:25.811+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:25.810+0530] {override.py:1932} INFO - Created Permission View: can read on DAG Run:dataset_produces_2
+[2026-03-01T14:15:25.820+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:25.820+0530] {override.py:1932} INFO - Created Permission View: menu access on DAG Run:dataset_produces_2
+[2026-03-01T14:15:25.830+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:25.830+0530] {override.py:1932} INFO - Created Permission View: can create on DAG Run:dataset_produces_2
+[2026-03-01T14:15:25.840+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:25.840+0530] {override.py:1932} INFO - Created Permission View: can delete on DAG Run:dataset_produces_2
+[2026-03-01T14:15:25.863+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:25.863+0530] {override.py:1932} INFO - Created Permission View: can read on DAG:consume_1_or_2_with_dataset_expressions
+[2026-03-01T14:15:25.872+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:25.872+0530] {override.py:1932} INFO - Created Permission View: can delete on DAG:consume_1_or_2_with_dataset_expressions
+[2026-03-01T14:15:25.882+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:25.882+0530] {override.py:1932} INFO - Created Permission View: can edit on DAG:consume_1_or_2_with_dataset_expressions
+[2026-03-01T14:15:25.898+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:25.898+0530] {override.py:1932} INFO - Created Permission View: can read on DAG Run:consume_1_or_2_with_dataset_expressions
+[2026-03-01T14:15:25.909+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:25.909+0530] {override.py:1932} INFO - Created Permission View: menu access on DAG Run:consume_1_or_2_with_dataset_expressions
+[2026-03-01T14:15:25.918+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:25.918+0530] {override.py:1932} INFO - Created Permission View: can create on DAG Run:consume_1_or_2_with_dataset_expressions
+[2026-03-01T14:15:25.928+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:25.928+0530] {override.py:1932} INFO - Created Permission View: can delete on DAG Run:consume_1_or_2_with_dataset_expressions
+[2026-03-01T14:15:25.948+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:25.947+0530] {override.py:1932} INFO - Created Permission View: can read on DAG:dataset_consumes_1
+[2026-03-01T14:15:25.960+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:25.960+0530] {override.py:1932} INFO - Created Permission View: can delete on DAG:dataset_consumes_1
+[2026-03-01T14:15:25.970+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:25.969+0530] {override.py:1932} INFO - Created Permission View: can edit on DAG:dataset_consumes_1
+[2026-03-01T14:15:25.991+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:25.991+0530] {override.py:1932} INFO - Created Permission View: can read on DAG Run:dataset_consumes_1
+[2026-03-01T14:15:26.001+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:26.001+0530] {override.py:1932} INFO - Created Permission View: menu access on DAG Run:dataset_consumes_1
+[2026-03-01T14:15:26.011+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:26.010+0530] {override.py:1932} INFO - Created Permission View: can create on DAG Run:dataset_consumes_1
+[2026-03-01T14:15:26.020+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:26.020+0530] {override.py:1932} INFO - Created Permission View: can delete on DAG Run:dataset_consumes_1
+[2026-03-01T14:15:26.040+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:26.040+0530] {override.py:1932} INFO - Created Permission View: can read on DAG:conditional_dataset_and_time_based_timetable
+[2026-03-01T14:15:26.050+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:26.049+0530] {override.py:1932} INFO - Created Permission View: can delete on DAG:conditional_dataset_and_time_based_timetable
+[2026-03-01T14:15:26.059+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:26.059+0530] {override.py:1932} INFO - Created Permission View: can edit on DAG:conditional_dataset_and_time_based_timetable
+[2026-03-01T14:15:26.076+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:26.076+0530] {override.py:1932} INFO - Created Permission View: can read on DAG Run:conditional_dataset_and_time_based_timetable
+[2026-03-01T14:15:26.086+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:26.086+0530] {override.py:1932} INFO - Created Permission View: menu access on DAG Run:conditional_dataset_and_time_based_timetable
+[2026-03-01T14:15:26.095+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:26.095+0530] {override.py:1932} INFO - Created Permission View: can create on DAG Run:conditional_dataset_and_time_based_timetable
+[2026-03-01T14:15:26.108+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:26.107+0530] {override.py:1932} INFO - Created Permission View: can delete on DAG Run:conditional_dataset_and_time_based_timetable
+[2026-03-01T14:15:26.109+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:26.108+0530] {dag.py:3239} INFO - Sync 10 DAGs
+[2026-03-01T14:15:26.121+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:26.121+0530] {dag.py:3262} INFO - Creating ORM DAG for dataset_consumes_1_never_scheduled
+[2026-03-01T14:15:26.121+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:26.121+0530] {dag.py:3262} INFO - Creating ORM DAG for dataset_consumes_1
+[2026-03-01T14:15:26.121+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:26.121+0530] {dag.py:3262} INFO - Creating ORM DAG for conditional_dataset_and_time_based_timetable
+[2026-03-01T14:15:26.122+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:26.122+0530] {dag.py:3262} INFO - Creating ORM DAG for dataset_consumes_1_and_2
+[2026-03-01T14:15:26.122+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:26.122+0530] {dag.py:3262} INFO - Creating ORM DAG for dataset_consumes_unknown_never_scheduled
+[2026-03-01T14:15:26.122+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:26.122+0530] {dag.py:3262} INFO - Creating ORM DAG for consume_1_or_2_with_dataset_expressions
+[2026-03-01T14:15:26.122+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:26.122+0530] {dag.py:3262} INFO - Creating ORM DAG for dataset_produces_2
+[2026-03-01T14:15:26.123+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:26.123+0530] {dag.py:3262} INFO - Creating ORM DAG for dataset_produces_1
+[2026-03-01T14:15:26.123+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:26.123+0530] {dag.py:3262} INFO - Creating ORM DAG for consume_1_or_both_2_and_3_with_dataset_expressions
+[2026-03-01T14:15:26.123+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:26.123+0530] {dag.py:3262} INFO - Creating ORM DAG for consume_1_and_2_with_dataset_expressions
+[2026-03-01T14:15:26.137+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:26.137+0530] {dag.py:4180} INFO - Setting next_dagrun for conditional_dataset_and_time_based_timetable to 2026-02-25 01:00:00+00:00, run_after=2026-02-25 01:00:00+00:00
+[2026-03-01T14:15:26.137+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:26.137+0530] {dag.py:4180} INFO - Setting next_dagrun for consume_1_and_2_with_dataset_expressions to None, run_after=None
+[2026-03-01T14:15:26.138+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:26.138+0530] {dag.py:4180} INFO - Setting next_dagrun for consume_1_or_2_with_dataset_expressions to None, run_after=None
+[2026-03-01T14:15:26.138+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:26.138+0530] {dag.py:4180} INFO - Setting next_dagrun for consume_1_or_both_2_and_3_with_dataset_expressions to None, run_after=None
+[2026-03-01T14:15:26.138+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:26.138+0530] {dag.py:4180} INFO - Setting next_dagrun for dataset_consumes_1 to None, run_after=None
+[2026-03-01T14:15:26.138+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:26.138+0530] {dag.py:4180} INFO - Setting next_dagrun for dataset_consumes_1_and_2 to None, run_after=None
+[2026-03-01T14:15:26.138+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:26.138+0530] {dag.py:4180} INFO - Setting next_dagrun for dataset_consumes_1_never_scheduled to None, run_after=None
+[2026-03-01T14:15:26.139+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:26.139+0530] {dag.py:4180} INFO - Setting next_dagrun for dataset_consumes_unknown_never_scheduled to None, run_after=None
+[2026-03-01T14:15:26.140+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:26.139+0530] {dag.py:4180} INFO - Setting next_dagrun for dataset_produces_1 to 2026-02-28 00:00:00+00:00, run_after=2026-03-01 00:00:00+00:00
+[2026-03-01T14:15:26.140+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:26.140+0530] {dag.py:4180} INFO - Setting next_dagrun for dataset_produces_2 to None, run_after=None
+[2026-03-01T14:15:26.168+0530] {processor.py:208} INFO - Processing /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/example_datasets.py took 1.049 seconds
+[2026-03-01T14:16:27.853+0530] {processor.py:186} INFO - Started process (PID=213925) to work on /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/example_datasets.py
+[2026-03-01T14:16:27.854+0530] {processor.py:914} INFO - Processing file /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/example_datasets.py for tasks to queue
+[2026-03-01T14:16:27.857+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:16:27.856+0530] {dagbag.py:588} INFO - Filling up the DagBag from /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/example_datasets.py
+[2026-03-01T14:16:27.868+0530] {processor.py:925} INFO - DAG(s) 'dataset_consumes_1_and_2', 'conditional_dataset_and_time_based_timetable', 'consume_1_or_both_2_and_3_with_dataset_expressions', 'dataset_consumes_unknown_never_scheduled', 'dataset_consumes_1', 'dataset_produces_1', 'consume_1_and_2_with_dataset_expressions', 'consume_1_or_2_with_dataset_expressions', 'dataset_produces_2', 'dataset_consumes_1_never_scheduled' retrieved from /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/example_datasets.py
+[2026-03-01T14:16:27.887+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:16:27.887+0530] {dag.py:3239} INFO - Sync 10 DAGs
+[2026-03-01T14:16:27.909+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:16:27.909+0530] {dag.py:4180} INFO - Setting next_dagrun for conditional_dataset_and_time_based_timetable to 2026-02-25 01:00:00+00:00, run_after=2026-02-25 01:00:00+00:00
+[2026-03-01T14:16:27.912+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:16:27.912+0530] {dag.py:4180} INFO - Setting next_dagrun for consume_1_and_2_with_dataset_expressions to None, run_after=None
+[2026-03-01T14:16:27.913+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:16:27.912+0530] {dag.py:4180} INFO - Setting next_dagrun for consume_1_or_2_with_dataset_expressions to None, run_after=None
+[2026-03-01T14:16:27.913+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:16:27.913+0530] {dag.py:4180} INFO - Setting next_dagrun for consume_1_or_both_2_and_3_with_dataset_expressions to None, run_after=None
+[2026-03-01T14:16:27.914+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:16:27.913+0530] {dag.py:4180} INFO - Setting next_dagrun for dataset_consumes_1 to None, run_after=None
+[2026-03-01T14:16:27.914+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:16:27.914+0530] {dag.py:4180} INFO - Setting next_dagrun for dataset_consumes_1_and_2 to None, run_after=None
+[2026-03-01T14:16:27.915+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:16:27.915+0530] {dag.py:4180} INFO - Setting next_dagrun for dataset_consumes_1_never_scheduled to None, run_after=None
+[2026-03-01T14:16:27.915+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:16:27.915+0530] {dag.py:4180} INFO - Setting next_dagrun for dataset_consumes_unknown_never_scheduled to None, run_after=None
+[2026-03-01T14:16:27.917+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:16:27.916+0530] {dag.py:4180} INFO - Setting next_dagrun for dataset_produces_1 to 2026-02-28 00:00:00+00:00, run_after=2026-03-01 00:00:00+00:00
+[2026-03-01T14:16:27.917+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:16:27.917+0530] {dag.py:4180} INFO - Setting next_dagrun for dataset_produces_2 to None, run_after=None
+[2026-03-01T14:16:27.940+0530] {processor.py:208} INFO - Processing /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/example_datasets.py took 0.093 seconds

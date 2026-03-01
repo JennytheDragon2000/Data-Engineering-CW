@@ -1,0 +1,32 @@
+[2026-03-01T14:15:08.017+0530] {processor.py:186} INFO - Started process (PID=212945) to work on /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/example_python_operator.py
+[2026-03-01T14:15:08.018+0530] {processor.py:914} INFO - Processing file /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/example_python_operator.py for tasks to queue
+[2026-03-01T14:15:08.021+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:08.020+0530] {dagbag.py:588} INFO - Filling up the DagBag from /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/example_python_operator.py
+[2026-03-01T14:15:08.026+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:08.026+0530] {example_python_operator.py:93} WARNING - The virtalenv_python example task requires virtualenv, please install it.
+[2026-03-01T14:15:08.027+0530] {processor.py:925} INFO - DAG(s) 'example_python_operator' retrieved from /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/example_python_operator.py
+[2026-03-01T14:15:08.099+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:08.099+0530] {override.py:1932} INFO - Created Permission View: can read on DAG:example_python_operator
+[2026-03-01T14:15:08.110+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:08.110+0530] {override.py:1932} INFO - Created Permission View: can delete on DAG:example_python_operator
+[2026-03-01T14:15:08.119+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:08.118+0530] {override.py:1932} INFO - Created Permission View: can edit on DAG:example_python_operator
+[2026-03-01T14:15:08.133+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:08.133+0530] {override.py:1932} INFO - Created Permission View: can read on DAG Run:example_python_operator
+[2026-03-01T14:15:08.142+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:08.142+0530] {override.py:1932} INFO - Created Permission View: menu access on DAG Run:example_python_operator
+[2026-03-01T14:15:08.151+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:08.151+0530] {override.py:1932} INFO - Created Permission View: can create on DAG Run:example_python_operator
+[2026-03-01T14:15:08.160+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:08.160+0530] {override.py:1932} INFO - Created Permission View: can delete on DAG Run:example_python_operator
+[2026-03-01T14:15:08.161+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:08.161+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-01T14:15:08.168+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:08.168+0530] {dag.py:3262} INFO - Creating ORM DAG for example_python_operator
+[2026-03-01T14:15:08.169+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:08.169+0530] {dag.py:4180} INFO - Setting next_dagrun for example_python_operator to None, run_after=None
+[2026-03-01T14:15:08.182+0530] {processor.py:208} INFO - Processing /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/example_python_operator.py took 0.172 seconds
+[2026-03-01T14:16:09.223+0530] {processor.py:186} INFO - Started process (PID=213432) to work on /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/example_python_operator.py
+[2026-03-01T14:16:09.224+0530] {processor.py:914} INFO - Processing file /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/example_python_operator.py for tasks to queue
+[2026-03-01T14:16:09.227+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:16:09.227+0530] {dagbag.py:588} INFO - Filling up the DagBag from /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/example_python_operator.py
+[2026-03-01T14:16:09.233+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:16:09.233+0530] {example_python_operator.py:93} WARNING - The virtalenv_python example task requires virtualenv, please install it.
+[2026-03-01T14:16:09.235+0530] {processor.py:925} INFO - DAG(s) 'example_python_operator' retrieved from /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/example_python_operator.py
+[2026-03-01T14:16:09.244+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:16:09.243+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-01T14:16:09.251+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:16:09.250+0530] {dag.py:4180} INFO - Setting next_dagrun for example_python_operator to None, run_after=None
+[2026-03-01T14:16:09.266+0530] {processor.py:208} INFO - Processing /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/example_python_operator.py took 0.048 seconds
+[2026-03-01T14:17:06.764+0530] {processor.py:186} INFO - Started process (PID=214916) to work on /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/example_python_operator.py
+[2026-03-01T14:17:06.765+0530] {processor.py:914} INFO - Processing file /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/example_python_operator.py for tasks to queue
+[2026-03-01T14:17:06.768+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:17:06.768+0530] {dagbag.py:588} INFO - Filling up the DagBag from /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/example_python_operator.py
+[2026-03-01T14:17:06.774+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:17:06.774+0530] {example_python_operator.py:93} WARNING - The virtalenv_python example task requires virtualenv, please install it.
+[2026-03-01T14:17:06.776+0530] {processor.py:925} INFO - DAG(s) 'example_python_operator' retrieved from /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/example_python_operator.py
+[2026-03-01T14:17:06.785+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:17:06.785+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-01T14:17:06.795+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:17:06.795+0530] {dag.py:4180} INFO - Setting next_dagrun for example_python_operator to None, run_after=None
+[2026-03-01T14:17:06.812+0530] {processor.py:208} INFO - Processing /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/example_python_operator.py took 0.054 seconds

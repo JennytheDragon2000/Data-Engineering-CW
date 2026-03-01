@@ -1,0 +1,15 @@
+[2026-03-01T14:14:41.276+0530] {processor.py:186} INFO - Started process (PID=212667) to work on /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/plugins/event_listener.py
+[2026-03-01T14:14:41.277+0530] {processor.py:914} INFO - Processing file /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/plugins/event_listener.py for tasks to queue
+[2026-03-01T14:14:41.279+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:14:41.278+0530] {dagbag.py:588} INFO - Filling up the DagBag from /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/plugins/event_listener.py
+[2026-03-01T14:14:41.281+0530] {processor.py:927} WARNING - No viable dags retrieved from /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/plugins/event_listener.py
+[2026-03-01T14:14:41.290+0530] {processor.py:208} INFO - Processing /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/plugins/event_listener.py took 0.017 seconds
+[2026-03-01T14:15:45.473+0530] {processor.py:186} INFO - Started process (PID=213362) to work on /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/plugins/event_listener.py
+[2026-03-01T14:15:45.473+0530] {processor.py:914} INFO - Processing file /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/plugins/event_listener.py for tasks to queue
+[2026-03-01T14:15:45.475+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:45.475+0530] {dagbag.py:588} INFO - Filling up the DagBag from /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/plugins/event_listener.py
+[2026-03-01T14:15:45.477+0530] {processor.py:927} WARNING - No viable dags retrieved from /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/plugins/event_listener.py
+[2026-03-01T14:15:45.482+0530] {processor.py:208} INFO - Processing /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/plugins/event_listener.py took 0.013 seconds
+[2026-03-01T14:16:40.715+0530] {processor.py:186} INFO - Started process (PID=214071) to work on /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/plugins/event_listener.py
+[2026-03-01T14:16:40.716+0530] {processor.py:914} INFO - Processing file /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/plugins/event_listener.py for tasks to queue
+[2026-03-01T14:16:40.718+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:16:40.718+0530] {dagbag.py:588} INFO - Filling up the DagBag from /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/plugins/event_listener.py
+[2026-03-01T14:16:40.721+0530] {processor.py:927} WARNING - No viable dags retrieved from /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/plugins/event_listener.py
+[2026-03-01T14:16:40.727+0530] {processor.py:208} INFO - Processing /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/plugins/event_listener.py took 0.017 seconds

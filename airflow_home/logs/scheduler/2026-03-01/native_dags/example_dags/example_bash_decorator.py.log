@@ -1,0 +1,22 @@
+[2026-03-01T14:15:40.992+0530] {processor.py:186} INFO - Started process (PID=213330) to work on /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/example_bash_decorator.py
+[2026-03-01T14:15:40.992+0530] {processor.py:914} INFO - Processing file /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/example_bash_decorator.py for tasks to queue
+[2026-03-01T14:15:40.995+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:40.994+0530] {dagbag.py:588} INFO - Filling up the DagBag from /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/example_bash_decorator.py
+[2026-03-01T14:15:41.009+0530] {processor.py:925} INFO - DAG(s) 'example_bash_decorator' retrieved from /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/example_bash_decorator.py
+[2026-03-01T14:15:41.098+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:41.098+0530] {override.py:1932} INFO - Created Permission View: can read on DAG:example_bash_decorator
+[2026-03-01T14:15:41.109+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:41.109+0530] {override.py:1932} INFO - Created Permission View: can delete on DAG:example_bash_decorator
+[2026-03-01T14:15:41.118+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:41.117+0530] {override.py:1932} INFO - Created Permission View: can edit on DAG:example_bash_decorator
+[2026-03-01T14:15:41.133+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:41.133+0530] {override.py:1932} INFO - Created Permission View: can read on DAG Run:example_bash_decorator
+[2026-03-01T14:15:41.142+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:41.142+0530] {override.py:1932} INFO - Created Permission View: menu access on DAG Run:example_bash_decorator
+[2026-03-01T14:15:41.152+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:41.152+0530] {override.py:1932} INFO - Created Permission View: can create on DAG Run:example_bash_decorator
+[2026-03-01T14:15:41.166+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:41.165+0530] {override.py:1932} INFO - Created Permission View: can delete on DAG Run:example_bash_decorator
+[2026-03-01T14:15:41.166+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:41.166+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-01T14:15:41.174+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:41.174+0530] {dag.py:3262} INFO - Creating ORM DAG for example_bash_decorator
+[2026-03-01T14:15:41.174+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:41.174+0530] {dag.py:4180} INFO - Setting next_dagrun for example_bash_decorator to None, run_after=None
+[2026-03-01T14:15:41.188+0530] {processor.py:208} INFO - Processing /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/example_bash_decorator.py took 0.200 seconds
+[2026-03-01T14:16:38.741+0530] {processor.py:186} INFO - Started process (PID=214013) to work on /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/example_bash_decorator.py
+[2026-03-01T14:16:38.741+0530] {processor.py:914} INFO - Processing file /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/example_bash_decorator.py for tasks to queue
+[2026-03-01T14:16:38.743+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:16:38.742+0530] {dagbag.py:588} INFO - Filling up the DagBag from /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/example_bash_decorator.py
+[2026-03-01T14:16:38.753+0530] {processor.py:925} INFO - DAG(s) 'example_bash_decorator' retrieved from /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/example_bash_decorator.py
+[2026-03-01T14:16:38.763+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:16:38.763+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-01T14:16:38.771+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:16:38.771+0530] {dag.py:4180} INFO - Setting next_dagrun for example_bash_decorator to None, run_after=None
+[2026-03-01T14:16:38.798+0530] {processor.py:208} INFO - Processing /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/example_bash_decorator.py took 0.060 seconds

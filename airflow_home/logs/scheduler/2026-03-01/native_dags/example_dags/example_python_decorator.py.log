@@ -1,0 +1,32 @@
+[2026-03-01T14:15:08.277+0530] {processor.py:186} INFO - Started process (PID=212946) to work on /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/example_python_decorator.py
+[2026-03-01T14:15:08.278+0530] {processor.py:914} INFO - Processing file /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/example_python_decorator.py for tasks to queue
+[2026-03-01T14:15:08.280+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:08.280+0530] {dagbag.py:588} INFO - Filling up the DagBag from /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/example_python_decorator.py
+[2026-03-01T14:15:08.288+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:08.287+0530] {example_python_decorator.py:80} WARNING - The virtalenv_python example task requires virtualenv, please install it.
+[2026-03-01T14:15:08.290+0530] {processor.py:925} INFO - DAG(s) 'example_python_decorator' retrieved from /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/example_python_decorator.py
+[2026-03-01T14:15:08.370+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:08.369+0530] {override.py:1932} INFO - Created Permission View: can read on DAG:example_python_decorator
+[2026-03-01T14:15:08.380+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:08.379+0530] {override.py:1932} INFO - Created Permission View: can delete on DAG:example_python_decorator
+[2026-03-01T14:15:08.388+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:08.388+0530] {override.py:1932} INFO - Created Permission View: can edit on DAG:example_python_decorator
+[2026-03-01T14:15:08.404+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:08.403+0530] {override.py:1932} INFO - Created Permission View: can read on DAG Run:example_python_decorator
+[2026-03-01T14:15:08.413+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:08.412+0530] {override.py:1932} INFO - Created Permission View: menu access on DAG Run:example_python_decorator
+[2026-03-01T14:15:08.424+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:08.423+0530] {override.py:1932} INFO - Created Permission View: can create on DAG Run:example_python_decorator
+[2026-03-01T14:15:08.437+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:08.437+0530] {override.py:1932} INFO - Created Permission View: can delete on DAG Run:example_python_decorator
+[2026-03-01T14:15:08.438+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:08.438+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-01T14:15:08.449+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:08.449+0530] {dag.py:3262} INFO - Creating ORM DAG for example_python_decorator
+[2026-03-01T14:15:08.450+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:08.450+0530] {dag.py:4180} INFO - Setting next_dagrun for example_python_decorator to None, run_after=None
+[2026-03-01T14:15:08.464+0530] {processor.py:208} INFO - Processing /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/example_python_decorator.py took 0.191 seconds
+[2026-03-01T14:16:10.296+0530] {processor.py:186} INFO - Started process (PID=213433) to work on /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/example_python_decorator.py
+[2026-03-01T14:16:10.297+0530] {processor.py:914} INFO - Processing file /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/example_python_decorator.py for tasks to queue
+[2026-03-01T14:16:10.299+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:16:10.299+0530] {dagbag.py:588} INFO - Filling up the DagBag from /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/example_python_decorator.py
+[2026-03-01T14:16:10.307+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:16:10.306+0530] {example_python_decorator.py:80} WARNING - The virtalenv_python example task requires virtualenv, please install it.
+[2026-03-01T14:16:10.308+0530] {processor.py:925} INFO - DAG(s) 'example_python_decorator' retrieved from /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/example_python_decorator.py
+[2026-03-01T14:16:10.317+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:16:10.317+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-01T14:16:10.325+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:16:10.324+0530] {dag.py:4180} INFO - Setting next_dagrun for example_python_decorator to None, run_after=None
+[2026-03-01T14:16:10.339+0530] {processor.py:208} INFO - Processing /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/example_python_decorator.py took 0.048 seconds
+[2026-03-01T14:17:09.612+0530] {processor.py:186} INFO - Started process (PID=214988) to work on /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/example_python_decorator.py
+[2026-03-01T14:17:09.613+0530] {processor.py:914} INFO - Processing file /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/example_python_decorator.py for tasks to queue
+[2026-03-01T14:17:09.617+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:17:09.616+0530] {dagbag.py:588} INFO - Filling up the DagBag from /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/example_python_decorator.py
+[2026-03-01T14:17:09.624+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:17:09.623+0530] {example_python_decorator.py:80} WARNING - The virtalenv_python example task requires virtualenv, please install it.
+[2026-03-01T14:17:09.625+0530] {processor.py:925} INFO - DAG(s) 'example_python_decorator' retrieved from /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/example_python_decorator.py
+[2026-03-01T14:17:09.634+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:17:09.634+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-01T14:17:09.644+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:17:09.644+0530] {dag.py:4180} INFO - Setting next_dagrun for example_python_decorator to None, run_after=None
+[2026-03-01T14:17:09.659+0530] {processor.py:208} INFO - Processing /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/example_python_decorator.py took 0.053 seconds

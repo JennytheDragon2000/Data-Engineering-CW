@@ -1,0 +1,6 @@
+base:
+  host: "localhost"
+  port: 5432
+  user: "postgres"
+  password: "" # On Fedora, sudo -u postgres often doesn't require a password for local connections
+  dbname: "ecommerce_dw"

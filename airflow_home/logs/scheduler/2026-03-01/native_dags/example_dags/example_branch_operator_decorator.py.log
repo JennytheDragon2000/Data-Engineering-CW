@@ -1,0 +1,10 @@
+[2026-03-01T14:15:35.225+0530] {processor.py:186} INFO - Started process (PID=213315) to work on /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/example_branch_operator_decorator.py
+[2026-03-01T14:15:35.226+0530] {processor.py:914} INFO - Processing file /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/example_branch_operator_decorator.py for tasks to queue
+[2026-03-01T14:15:35.227+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:15:35.227+0530] {dagbag.py:588} INFO - Filling up the DagBag from /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/example_branch_operator_decorator.py
+[2026-03-01T14:15:35.230+0530] {processor.py:927} WARNING - No viable dags retrieved from /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/example_branch_operator_decorator.py
+[2026-03-01T14:15:35.236+0530] {processor.py:208} INFO - Processing /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/example_branch_operator_decorator.py took 0.016 seconds
+[2026-03-01T14:16:33.573+0530] {processor.py:186} INFO - Started process (PID=213935) to work on /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/example_branch_operator_decorator.py
+[2026-03-01T14:16:33.574+0530] {processor.py:914} INFO - Processing file /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/example_branch_operator_decorator.py for tasks to queue
+[2026-03-01T14:16:33.577+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:16:33.577+0530] {dagbag.py:588} INFO - Filling up the DagBag from /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/example_branch_operator_decorator.py
+[2026-03-01T14:16:33.580+0530] {processor.py:927} WARNING - No viable dags retrieved from /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/example_branch_operator_decorator.py
+[2026-03-01T14:16:33.586+0530] {processor.py:208} INFO - Processing /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/example_branch_operator_decorator.py took 0.020 seconds
