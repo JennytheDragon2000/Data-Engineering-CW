@@ -116,9 +116,12 @@ def clean_products(df: DataFrame, translations: DataFrame) -> DataFrame:
     df = df.dropna(subset=["product_id"])
     df = df.withColumn("product_weight_g", F.col("product_weight_g").cast(DoubleType()))
     # 4. Translate category names to English
+    translations_renamed = translations.withColumnRenamed(
+        "product_category_name", "product_category_name_pt"
+    )
     df = df.join(
-        translations.withColumnRenamed("product_category_name", "product_category_name_pt"),
-        df["product_category_name"] == translations["product_category_name"],
+        translations_renamed,
+        df["product_category_name"] == translations_renamed["product_category_name_pt"],
         "left",
     ).drop("product_category_name")
     df = df.withColumnRenamed("product_category_name_english", "product_category_name")
