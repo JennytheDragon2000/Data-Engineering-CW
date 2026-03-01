@@ -1,0 +1,26 @@
+database:
+  host: localhost
+  port: 5432
+  name: ecommerce_dw
+  user: postgres
+  password: postgres
+
+paths:
+  raw_data: data/raw
+  bronze: data_lake/bronze
+  silver: data_lake/silver
+
+spark:
+  app_name: EcommercePipeline
+  master: local[*]
+  driver_memory: 2g
+
+datasets:
+  - olist_customers_dataset.csv
+  - olist_orders_dataset.csv
+  - olist_order_items_dataset.csv
+  - olist_order_payments_dataset.csv
+  - olist_order_reviews_dataset.csv
+  - olist_products_dataset.csv
+  - olist_sellers_dataset.csv
+  - product_category_name_translation.csv
