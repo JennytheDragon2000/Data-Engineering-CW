@@ -1,4 +1,5 @@
 # CM2606 Data Engineering Coursework
+
 ## End-to-End Sales Analytics Pipeline — Olist Brazilian E-Commerce
 
 ---
@@ -25,13 +26,13 @@ This report documents the design and implementation of an end-to-end data engine
 
 **Technology stack:**
 
-| Component | Technology |
-|-----------|-----------|
-| Ingestion | Python 3.10, pandas 2.1 |
-| Processing | Apache Spark 3.5 (PySpark) |
-| Storage (lake) | Apache Parquet |
-| Data warehouse | PostgreSQL 14 |
-| Orchestration | Apache Airflow 2.8 |
+| Component      | Technology                 |
+| -------------- | -------------------------- |
+| Ingestion      | Python 3.10, pandas 2.1    |
+| Processing     | Apache Spark 3.5 (PySpark) |
+| Storage (lake) | Apache Parquet             |
+| Data warehouse | PostgreSQL 14              |
+| Orchestration  | Apache Airflow 2.8         |
 
 ---
 
@@ -41,20 +42,21 @@ The dataset is sourced from Kaggle ([Olist Brazilian E-Commerce](https://www.kag
 
 ### 2.1 Source Files
 
-| File | Rows | Key Columns |
-|------|------|-------------|
-| `olist_orders_dataset.csv` | 99,441 | `order_id`, `customer_id`, `order_purchase_timestamp`, `order_status` |
-| `olist_order_items_dataset.csv` | 112,650 | `order_id`, `product_id`, `seller_id`, `price`, `freight_value` |
-| `olist_order_payments_dataset.csv` | 103,886 | `order_id`, `payment_type`, `payment_value` |
-| `olist_order_reviews_dataset.csv` | 104,719 | `order_id`, `review_score` |
-| `olist_customers_dataset.csv` | 99,441 | `customer_id`, `customer_unique_id`, `customer_city`, `customer_state` |
-| `olist_products_dataset.csv` | 32,951 | `product_id`, `product_category_name`, `product_weight_g` |
-| `olist_sellers_dataset.csv` | 3,095 | `seller_id`, `seller_city`, `seller_state` |
-| `product_category_name_translation.csv` | 71 | `product_category_name`, `product_category_name_english` |
+| File                                    | Rows    | Key Columns                                                            |
+| --------------------------------------- | ------- | ---------------------------------------------------------------------- |
+| `olist_orders_dataset.csv`              | 99,441  | `order_id`, `customer_id`, `order_purchase_timestamp`, `order_status`  |
+| `olist_order_items_dataset.csv`         | 112,650 | `order_id`, `product_id`, `seller_id`, `price`, `freight_value`        |
+| `olist_order_payments_dataset.csv`      | 103,886 | `order_id`, `payment_type`, `payment_value`                            |
+| `olist_order_reviews_dataset.csv`       | 104,719 | `order_id`, `review_score`                                             |
+| `olist_customers_dataset.csv`           | 99,441  | `customer_id`, `customer_unique_id`, `customer_city`, `customer_state` |
+| `olist_products_dataset.csv`            | 32,951  | `product_id`, `product_category_name`, `product_weight_g`              |
+| `olist_sellers_dataset.csv`             | 3,095   | `seller_id`, `seller_city`, `seller_state`                             |
+| `product_category_name_translation.csv` | 71      | `product_category_name`, `product_category_name_english`               |
 
 ### 2.2 Entity Relationship (Source)
 
 <!-- IMAGE PLACEHOLDER: ER diagram of the 8 source CSV files showing join keys between orders, customers, items, products, sellers, payments, and reviews. Export from draw.io or dbdiagram.io. Suggested filename: img/source_erd.png -->
+
 ![Source Entity Relationship Diagram](img/source_erd.png)
 
 ---
@@ -66,7 +68,7 @@ The pipeline follows a **medallion architecture** (Bronze → Silver → Gold), 
 ```
 ┌─────────────────────────────────────────────────────────────────────┐
 │                         Apache Airflow DAG                          │
-│  [setup_db] ──────────► [ingest_data] ──────────► [run_etl]        │
+│  [setup_db] ──────────► [ingest_data] ──────────► [run_etl]         │
 └─────────────────────────────────────────────────────────────────────┘
         │                       │                        │
         ▼                       ▼                        ▼
@@ -84,6 +86,7 @@ The pipeline follows a **medallion architecture** (Bronze → Silver → Gold), 
 ```
 
 <!-- IMAGE PLACEHOLDER: Architecture diagram showing the three pipeline stages and data flow between components. A clean flow diagram with colour-coded layers (bronze/silver/gold) works well. Suggested filename: img/architecture.png -->
+
 ![Pipeline Architecture Diagram](img/architecture.png)
 
 ### 3.1 Project Structure
@@ -129,6 +132,7 @@ Each file also gains an `_ingestion_date` metadata column. Ingestion counts and 
 `scripts/etl_spark.py` reads from bronze and applies the four transformations described in [Section 6](#6-etl-transformations). Cleaned DataFrames are written back to `data_lake/silver/<table_name>/` in overwrite mode.
 
 <!-- IMAGE PLACEHOLDER: Screenshot of the data_lake/ directory tree in a file explorer or terminal, showing the partitioned bronze folders and silver output folders. Suggested filename: img/datalake_tree.png -->
+
 ![Data Lake Directory Structure](img/datalake_tree.png)
 
 ---
@@ -140,63 +144,64 @@ Each file also gains an `_ingestion_date` metadata column. Ingestion counts and 
 The data warehouse uses a **star schema** optimised for analytical queries. A single fact table at order-item grain is surrounded by four dimension tables.
 
 <!-- IMAGE PLACEHOLDER: Star schema ERD showing fact_sales at the centre connected to dim_date, dim_customer, dim_product, and dim_seller with labelled FK arrows and column lists. Generate from pgAdmin's ERD tool or dbdiagram.io. Suggested filename: img/star_schema.png -->
+
 ![Star Schema Diagram](img/star_schema.png)
 
 ### 5.2 Table Definitions
 
 #### `fact_sales`
 
-| Column | Type | Description |
-|--------|------|-------------|
-| `order_item_sk` | SERIAL PK | Surrogate key |
-| `date_key` | INT FK | → `dim_date` |
-| `customer_key` | INT FK | → `dim_customer` |
-| `product_key` | INT FK | → `dim_product` |
-| `seller_key` | INT FK | → `dim_seller` |
-| `order_id` | VARCHAR(64) | Source order reference |
-| `price` | DOUBLE | Item price |
-| `freight_value` | DOUBLE | Freight cost |
-| `payment_value` | DOUBLE | Total payment (summed per order) |
-| `review_score` | DOUBLE | Average review score (per order) |
+| Column          | Type        | Description                      |
+| --------------- | ----------- | -------------------------------- |
+| `order_item_sk` | SERIAL PK   | Surrogate key                    |
+| `date_key`      | INT FK      | → `dim_date`                     |
+| `customer_key`  | INT FK      | → `dim_customer`                 |
+| `product_key`   | INT FK      | → `dim_product`                  |
+| `seller_key`    | INT FK      | → `dim_seller`                   |
+| `order_id`      | VARCHAR(64) | Source order reference           |
+| `price`         | DOUBLE      | Item price                       |
+| `freight_value` | DOUBLE      | Freight cost                     |
+| `payment_value` | DOUBLE      | Total payment (summed per order) |
+| `review_score`  | DOUBLE      | Average review score (per order) |
 
 #### `dim_date`
 
-| Column | Type | Description |
-|--------|------|-------------|
-| `date_key` | SERIAL PK | Surrogate key |
-| `full_date` | DATE UNIQUE | Calendar date |
-| `year` | SMALLINT | |
-| `month` | SMALLINT | 1–12 |
-| `quarter` | SMALLINT | 1–4 |
-| `day_of_week` | SMALLINT | 1 = Sunday (Spark convention) |
+| Column        | Type        | Description                   |
+| ------------- | ----------- | ----------------------------- |
+| `date_key`    | SERIAL PK   | Surrogate key                 |
+| `full_date`   | DATE UNIQUE | Calendar date                 |
+| `year`        | SMALLINT    |                               |
+| `month`       | SMALLINT    | 1–12                          |
+| `quarter`     | SMALLINT    | 1–4                           |
+| `day_of_week` | SMALLINT    | 1 = Sunday (Spark convention) |
 
 #### `dim_customer`
 
-| Column | Type |
-|--------|------|
-| `customer_key` | SERIAL PK |
-| `customer_id` | VARCHAR(64) UNIQUE |
-| `customer_unique_id` | VARCHAR(64) |
-| `customer_city` | VARCHAR(128) |
-| `customer_state` | CHAR(2) |
+| Column               | Type               |
+| -------------------- | ------------------ |
+| `customer_key`       | SERIAL PK          |
+| `customer_id`        | VARCHAR(64) UNIQUE |
+| `customer_unique_id` | VARCHAR(64)        |
+| `customer_city`      | VARCHAR(128)       |
+| `customer_state`     | CHAR(2)            |
 
 #### `dim_product`
 
-| Column | Type |
-|--------|------|
-| `product_key` | SERIAL PK |
-| `product_id` | VARCHAR(64) UNIQUE |
-| `product_category_name` | VARCHAR(128) |
-| `product_weight_g` | DOUBLE |
+| Column                  | Type               |
+| ----------------------- | ------------------ |
+| `product_key`           | SERIAL PK          |
+| `product_id`            | VARCHAR(64) UNIQUE |
+| `product_category_name` | VARCHAR(128)       |
+| `product_weight_g`      | DOUBLE             |
 
 #### `dim_seller`
 
-| Column | Type |
-|--------|------|
-| `seller_key` | SERIAL PK |
-| `seller_id` | VARCHAR(64) UNIQUE |
-| `seller_city` | VARCHAR(128) |
-| `seller_state` | CHAR(2) |
+| Column         | Type               |
+| -------------- | ------------------ |
+| `seller_key`   | SERIAL PK          |
+| `seller_id`    | VARCHAR(64) UNIQUE |
+| `seller_city`  | VARCHAR(128)       |
+| `seller_state` | CHAR(2)            |
 
 ### 5.3 Indexes
 
@@ -280,22 +285,24 @@ The Airflow DAG `ecommerce_sales_pipeline` chains the three pipeline steps seque
 setup_db  ──►  ingest_data  ──►  run_etl
 ```
 
-| Task | Operator | Script |
-|------|----------|--------|
-| `setup_db` | PythonOperator | `scripts/db_setup.py` |
-| `ingest_data` | PythonOperator | `scripts/ingestion.py` |
-| `run_etl` | BashOperator | `spark-submit scripts/etl_spark.py` |
+| Task          | Operator       | Script                              |
+| ------------- | -------------- | ----------------------------------- |
+| `setup_db`    | PythonOperator | `scripts/db_setup.py`               |
+| `ingest_data` | PythonOperator | `scripts/ingestion.py`              |
+| `run_etl`     | BashOperator   | `spark-submit scripts/etl_spark.py` |
 
 **Schedule:** `@once` — the DAG is designed for a single manual trigger, as appropriate for a batch load of a static historical dataset.
 
 ### 7.2 DAG Graph View
 
 <!-- IMAGE PLACEHOLDER: Screenshot of the Airflow UI showing the DAG graph view with all three tasks in the "success" (green) state after a completed run. Capture from http://localhost:8080. Suggested filename: img/airflow_dag_success.png -->
+
 ![Airflow DAG — Successful Run](img/airflow_dag_success.png)
 
 ### 7.3 Task Logs
 
 <!-- IMAGE PLACEHOLDER: Screenshot of the Airflow task log for the run_etl task, showing Spark output lines confirming silver layer row counts and "ETL complete." message. Suggested filename: img/airflow_etl_log.png -->
+
 ![Airflow — ETL Task Log](img/airflow_etl_log.png)
 
 ---
@@ -321,15 +328,16 @@ Or trigger the full pipeline via the Airflow UI.
 
 ### 8.2 Row Counts After Load
 
-| Table | Expected Rows |
-|-------|--------------|
-| `fact_sales` | ~112,000 |
-| `dim_customer` | ~99,400 |
-| `dim_product` | ~32,900 |
-| `dim_seller` | ~3,000 |
-| `dim_date` | ~700 |
+| Table          | Expected Rows |
+| -------------- | ------------- |
+| `fact_sales`   | ~112,000      |
+| `dim_customer` | ~99,400       |
+| `dim_product`  | ~32,900       |
+| `dim_seller`   | ~3,000        |
+| `dim_date`     | ~700          |
 
 <!-- IMAGE PLACEHOLDER: Screenshot of a psql or pgAdmin query window showing SELECT COUNT(*) results for each of the five tables. Suggested filename: img/row_counts.png -->
+
 ![PostgreSQL Row Counts](img/row_counts.png)
 
 ### 8.3 Sample BI Query — Monthly Revenue
@@ -349,6 +357,7 @@ ORDER BY d.year, d.month;
 ```
 
 <!-- IMAGE PLACEHOLDER: Screenshot of the query result in psql or pgAdmin showing monthly revenue figures from 2016–2018, or alternatively a bar chart generated from these results. Suggested filename: img/monthly_revenue.png -->
+
 ![Monthly Revenue Query Result](img/monthly_revenue.png)
 
 ### 8.4 Sample BI Query — Top Product Categories by Revenue
@@ -367,6 +376,7 @@ LIMIT 10;
 ```
 
 <!-- IMAGE PLACEHOLDER: Screenshot or table of the top 10 product categories by revenue. Suggested filename: img/top_categories.png -->
+
 ![Top Product Categories](img/top_categories.png)
 
 ---

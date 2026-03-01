@@ -41,8 +41,55 @@ The star schema is directly designed to serve these queries: `fact_sales` holds 
 
 ## 4. Pipeline Design
 
-<!-- IMAGE PLACEHOLDER: Full pipeline architecture diagram showing all five components — Data Source (CSV), Ingestion Flow (pandas), Data Lake (bronze/silver Parquet), ETL Flow (PySpark), Data Storage (PostgreSQL star schema) — with named arrows for each data flow direction. Also include the Airflow DAG sitting above all components as the orchestration layer. Suggested filename: img/architecture.png -->
-![Pipeline Architecture Diagram](img/architecture.png)
+```mermaid
+flowchart TD
+    CFG["config/config.yaml\n(DB credentials · file paths)"]
+
+    subgraph SRC["Data Source"]
+        CSV["8 × Olist CSV Files\ndata/raw/"]
+    end
+
+    subgraph AF["Apache Airflow — DAG: ecommerce_sales_pipeline  (schedule: @once)"]
+        subgraph T1["Task 1 · setup_db  (PythonOperator)"]
+            DBSetup["db_setup.py\npsycopg2 DDL"]
+        end
+        subgraph T2["Task 2 · ingest_data  (PythonOperator)"]
+            Ingest["ingestion.py\npandas"]
+        end
+        subgraph T3["Task 3 · run_etl  (BashOperator · spark-submit)"]
+            ETL["etl_spark.py\nPySpark 3.5"]
+        end
+        T1 --> T2 --> T3
+    end
+
+    subgraph LAKE["Data Lake — Medallion Architecture  (local filesystem)"]
+        Bronze["Bronze Layer\ndata_lake/bronze/\nRaw Parquet · partitioned by ingestion_date"]
+        Silver["Silver Layer\ndata_lake/silver/\nCleaned · Typed · Deduplicated Parquet"]
+    end
+
+    subgraph DW["Data Warehouse — PostgreSQL Star Schema"]
+        Fact["fact_sales\n(price · freight_value · payment_value · review_score)"]
+        DimDate["dim_date"]
+        DimCust["dim_customer"]
+        DimProd["dim_product"]
+        DimSell["dim_seller"]
+        Fact -->|date_key FK| DimDate
+        Fact -->|customer_key FK| DimCust
+        Fact -->|product_key FK| DimProd
+        Fact -->|seller_key FK| DimSell
+    end
+
+    CSV -->|"pandas read_csv"| Ingest
+    Ingest -->|"write Parquet"| Bronze
+    Bronze -->|"spark.read.parquet"| ETL
+    ETL -->|"write cleaned Parquet"| Silver
+    ETL -->|"JDBC · staging-table upsert"| Fact
+    DBSetup -->|"CREATE TABLE IF NOT EXISTS"| DW
+
+    CFG -.->|"credentials & paths"| DBSetup
+    CFG -.->|"credentials & paths"| Ingest
+    CFG -.->|"credentials & paths"| ETL
+```
 
 **Components:**
 
@@ -53,8 +100,53 @@ The star schema is directly designed to serve these queries: `fact_sales` holds 
 - **Data Storage** — PostgreSQL star schema with one fact table (`fact_sales`) and four dimension tables (`dim_date`, `dim_customer`, `dim_product`, `dim_seller`). Surrogate keys are managed via `SERIAL` columns; foreign key indexes are created on the fact table for join performance.
 - **Orchestration** (`ecommerce_pipeline_dag.py`) — An Airflow DAG (`ecommerce_sales_pipeline`, schedule `@once`) chains three tasks sequentially: `setup_db → ingest_data → run_etl`.
 
-<!-- IMAGE PLACEHOLDER: Star schema ERD showing fact_sales at centre with FK arrows to all four dimension tables and column names listed. Generate from pgAdmin's ERD tool or dbdiagram.io. Suggested filename: img/star_schema.png -->
-![Star Schema ERD](img/star_schema.png)
+```mermaid
+erDiagram
+    fact_sales {
+        serial      sale_key        PK
+        int         date_key        FK
+        int         customer_key    FK
+        int         product_key     FK
+        int         seller_key      FK
+        varchar     order_id
+        double      price
+        double      freight_value
+        double      payment_value
+        double      review_score
+    }
+    dim_date {
+        serial      date_key    PK
+        date        full_date
+        smallint    year
+        smallint    month
+        smallint    quarter
+        smallint    day_of_week
+    }
+    dim_customer {
+        serial      customer_key        PK
+        varchar     customer_id
+        varchar     customer_unique_id
+        varchar     customer_city
+        char        customer_state
+    }
+    dim_product {
+        serial      product_key             PK
+        varchar     product_id
+        varchar     product_category_name
+        double      product_weight_g
+    }
+    dim_seller {
+        serial      seller_key      PK
+        varchar     seller_id
+        varchar     seller_city
+        char        seller_state
+    }
+
+    fact_sales }o--|| dim_date     : "date_key"
+    fact_sales }o--|| dim_customer : "customer_key"
+    fact_sales }o--|| dim_product  : "product_key"
+    fact_sales }o--|| dim_seller   : "seller_key"
+```
 
 ---
 

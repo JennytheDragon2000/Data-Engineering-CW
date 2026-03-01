@@ -1,0 +1,51 @@
+[2026-03-01T14:28:44.820+0530] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-01T14:28:44.830+0530] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ecommerce_sales_pipeline.ingest_data manual__2026-03-01T08:58:39.474854+00:00 [queued]>
+[2026-03-01T14:28:44.834+0530] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ecommerce_sales_pipeline.ingest_data manual__2026-03-01T08:58:39.474854+00:00 [queued]>
+[2026-03-01T14:28:44.834+0530] {taskinstance.py:2884} INFO - Starting attempt 1 of 2
+[2026-03-01T14:28:44.864+0530] {taskinstance.py:2907} INFO - Executing <Task(PythonOperator): ingest_data> on 2026-03-01 08:58:39.474854+00:00
+[2026-03-01T14:28:44.870+0530] {logging_mixin.py:190} WARNING - /home/jenny/.local/lib/python3.13/site-packages/airflow/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=228720) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-03-01T14:28:44.871+0530] {standard_task_runner.py:72} INFO - Started process 228732 to run task
+[2026-03-01T14:28:44.871+0530] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'ecommerce_sales_pipeline', 'ingest_data', 'manual__2026-03-01T08:58:39.474854+00:00', '--job-id', '13', '--raw', '--subdir', 'DAGS_FOLDER/ecommerce_pipeline_dag.py', '--cfg-path', '/tmp/tmpyjb78_bw']
+[2026-03-01T14:28:44.871+0530] {standard_task_runner.py:105} INFO - Job 13: Subtask ingest_data
+[2026-03-01T14:28:44.919+0530] {task_command.py:467} INFO - Running <TaskInstance: ecommerce_sales_pipeline.ingest_data manual__2026-03-01T08:58:39.474854+00:00 [running]> on host fedora
+[2026-03-01T14:28:44.961+0530] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data_engineering' AIRFLOW_CTX_DAG_ID='ecommerce_sales_pipeline' AIRFLOW_CTX_TASK_ID='ingest_data' AIRFLOW_CTX_EXECUTION_DATE='2026-03-01T08:58:39.474854+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-03-01T08:58:39.474854+00:00'
+[2026-03-01T14:28:44.962+0530] {logging_mixin.py:190} INFO - Task instance is in running state
+[2026-03-01T14:28:44.962+0530] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2026-03-01T14:28:44.962+0530] {logging_mixin.py:190} INFO - Current task name:ingest_data state:running start_date:2026-03-01 08:58:44.830664+00:00
+[2026-03-01T14:28:44.962+0530] {logging_mixin.py:190} INFO - Dag name:ecommerce_sales_pipeline and current dag run status:running
+[2026-03-01T14:28:44.962+0530] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-01T14:28:44.965+0530] {ingestion.py:43} INFO - Ingesting olist_customers_dataset.csv ...
+[2026-03-01T14:28:45.077+0530] {ingestion.py:47} INFO -   Rows read: 99441
+[2026-03-01T14:28:45.158+0530] {ingestion.py:60} INFO -   Written to: /home/jenny/Documents/2nd-sem/data-engineering/ecommerce-pipeline/data_lake/bronze/olist_customers_dataset/ingestion_date=2026-03-01/olist_customers_dataset.parquet (6925.1 KB)
+[2026-03-01T14:28:45.158+0530] {ingestion.py:43} INFO - Ingesting olist_orders_dataset.csv ...
+[2026-03-01T14:28:45.408+0530] {ingestion.py:47} INFO -   Rows read: 99441
+[2026-03-01T14:28:45.547+0530] {ingestion.py:60} INFO -   Written to: /home/jenny/Documents/2nd-sem/data-engineering/ecommerce-pipeline/data_lake/bronze/olist_orders_dataset/ingestion_date=2026-03-01/olist_orders_dataset.parquet (10615.7 KB)
+[2026-03-01T14:28:45.547+0530] {ingestion.py:43} INFO - Ingesting olist_order_items_dataset.csv ...
+[2026-03-01T14:28:45.719+0530] {ingestion.py:47} INFO -   Rows read: 112650
+[2026-03-01T14:28:45.796+0530] {ingestion.py:60} INFO -   Written to: /home/jenny/Documents/2nd-sem/data-engineering/ecommerce-pipeline/data_lake/bronze/olist_order_items_dataset/ingestion_date=2026-03-01/olist_order_items_dataset.parquet (6456.0 KB)
+[2026-03-01T14:28:45.797+0530] {ingestion.py:43} INFO - Ingesting olist_order_payments_dataset.csv ...
+[2026-03-01T14:28:45.869+0530] {ingestion.py:47} INFO -   Rows read: 103886
+[2026-03-01T14:28:45.915+0530] {ingestion.py:60} INFO -   Written to: /home/jenny/Documents/2nd-sem/data-engineering/ecommerce-pipeline/data_lake/bronze/olist_order_payments_dataset/ingestion_date=2026-03-01/olist_order_payments_dataset.parquet (3783.1 KB)
+[2026-03-01T14:28:45.916+0530] {ingestion.py:43} INFO - Ingesting olist_order_reviews_dataset.csv ...
+[2026-03-01T14:28:46.144+0530] {ingestion.py:47} INFO -   Rows read: 99224
+[2026-03-01T14:28:46.244+0530] {ingestion.py:60} INFO -   Written to: /home/jenny/Documents/2nd-sem/data-engineering/ecommerce-pipeline/data_lake/bronze/olist_order_reviews_dataset/ingestion_date=2026-03-01/olist_order_reviews_dataset.parquet (9472.9 KB)
+[2026-03-01T14:28:46.245+0530] {ingestion.py:43} INFO - Ingesting olist_products_dataset.csv ...
+[2026-03-01T14:28:46.278+0530] {ingestion.py:47} INFO -   Rows read: 32951
+[2026-03-01T14:28:46.300+0530] {ingestion.py:60} INFO -   Written to: /home/jenny/Documents/2nd-sem/data-engineering/ecommerce-pipeline/data_lake/bronze/olist_products_dataset/ingestion_date=2026-03-01/olist_products_dataset.parquet (1394.2 KB)
+[2026-03-01T14:28:46.300+0530] {ingestion.py:43} INFO - Ingesting olist_sellers_dataset.csv ...
+[2026-03-01T14:28:46.303+0530] {ingestion.py:47} INFO -   Rows read: 3095
+[2026-03-01T14:28:46.391+0530] {ingestion.py:60} INFO -   Written to: /home/jenny/Documents/2nd-sem/data-engineering/ecommerce-pipeline/data_lake/bronze/olist_sellers_dataset/ingestion_date=2026-03-01/olist_sellers_dataset.parquet (132.3 KB)
+[2026-03-01T14:28:46.391+0530] {ingestion.py:43} INFO - Ingesting product_category_name_translation.csv ...
+[2026-03-01T14:28:46.394+0530] {ingestion.py:47} INFO -   Rows read: 71
+[2026-03-01T14:28:46.398+0530] {ingestion.py:60} INFO -   Written to: /home/jenny/Documents/2nd-sem/data-engineering/ecommerce-pipeline/data_lake/bronze/product_category_name_translation/ingestion_date=2026-03-01/product_category_name_translation.parquet (4.8 KB)
+[2026-03-01T14:28:46.398+0530] {ingestion.py:62} INFO - Ingestion complete.
+[2026-03-01T14:28:46.399+0530] {python.py:240} INFO - Done. Returned value was: None
+[2026-03-01T14:28:47.136+0530] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-01T14:28:47.137+0530] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=ecommerce_sales_pipeline, task_id=ingest_data, run_id=manual__2026-03-01T08:58:39.474854+00:00, execution_date=20260301T085839, start_date=20260301T085844, end_date=20260301T085847
+[2026-03-01T14:28:47.191+0530] {logging_mixin.py:190} INFO - Task instance in success state
+[2026-03-01T14:28:47.191+0530] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2026-03-01T14:28:47.191+0530] {logging_mixin.py:190} INFO - Dag name:ecommerce_sales_pipeline queued_at:2026-03-01 08:58:39.489305+00:00
+[2026-03-01T14:28:47.192+0530] {logging_mixin.py:190} INFO - Task hostname:fedora operator:PythonOperator
+[2026-03-01T14:28:47.247+0530] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-03-01T14:28:47.266+0530] {taskinstance.py:3924} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-03-01T14:28:47.298+0530] {local_task_job_runner.py:245} INFO - ::endgroup::
