@@ -48,3 +48,10 @@
 [2026-03-01T14:25:59.242+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:25:59.242+0530] {dag.py:3239} INFO - Sync 1 DAGs
 [2026-03-01T14:25:59.256+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:25:59.256+0530] {dag.py:4180} INFO - Setting next_dagrun for ecommerce_sales_pipeline to None, run_after=None
 [2026-03-01T14:25:59.274+0530] {processor.py:208} INFO - Processing /home/jenny/Documents/2nd-sem/data-engineering/ecommerce-pipeline/dags/ecommerce_pipeline_dag.py took 0.054 seconds
+[2026-03-01T14:27:25.211+0530] {processor.py:186} INFO - Started process (PID=226835) to work on /home/jenny/Documents/2nd-sem/data-engineering/ecommerce-pipeline/dags/ecommerce_pipeline_dag.py
+[2026-03-01T14:27:25.212+0530] {processor.py:914} INFO - Processing file /home/jenny/Documents/2nd-sem/data-engineering/ecommerce-pipeline/dags/ecommerce_pipeline_dag.py for tasks to queue
+[2026-03-01T14:27:25.214+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:27:25.214+0530] {dagbag.py:588} INFO - Filling up the DagBag from /home/jenny/Documents/2nd-sem/data-engineering/ecommerce-pipeline/dags/ecommerce_pipeline_dag.py
+[2026-03-01T14:27:25.220+0530] {processor.py:925} INFO - DAG(s) 'ecommerce_sales_pipeline' retrieved from /home/jenny/Documents/2nd-sem/data-engineering/ecommerce-pipeline/dags/ecommerce_pipeline_dag.py
+[2026-03-01T14:27:25.228+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:27:25.228+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-01T14:27:25.240+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:27:25.240+0530] {dag.py:4180} INFO - Setting next_dagrun for ecommerce_sales_pipeline to None, run_after=None
+[2026-03-01T14:27:25.255+0530] {processor.py:208} INFO - Processing /home/jenny/Documents/2nd-sem/data-engineering/ecommerce-pipeline/dags/ecommerce_pipeline_dag.py took 0.049 seconds

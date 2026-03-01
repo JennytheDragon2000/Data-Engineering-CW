@@ -110,3 +110,11 @@
 [2026-03-01T14:26:43.476+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:26:43.476+0530] {dag.py:4180} INFO - Setting next_dagrun for read_dataset_event to 2026-02-28 00:00:00+00:00, run_after=2026-03-01 00:00:00+00:00
 [2026-03-01T14:26:43.479+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:26:43.478+0530] {dag.py:4180} INFO - Setting next_dagrun for read_dataset_event_from_classic to 2026-02-28 00:00:00+00:00, run_after=2026-03-01 00:00:00+00:00
 [2026-03-01T14:26:43.493+0530] {processor.py:208} INFO - Processing /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/example_inlet_event_extra.py took 0.058 seconds
+[2026-03-01T14:28:09.626+0530] {processor.py:186} INFO - Started process (PID=228067) to work on /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/example_inlet_event_extra.py
+[2026-03-01T14:28:09.626+0530] {processor.py:914} INFO - Processing file /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/example_inlet_event_extra.py for tasks to queue
+[2026-03-01T14:28:09.628+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:28:09.628+0530] {dagbag.py:588} INFO - Filling up the DagBag from /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/example_inlet_event_extra.py
+[2026-03-01T14:28:09.636+0530] {processor.py:925} INFO - DAG(s) 'read_dataset_event_from_classic', 'read_dataset_event' retrieved from /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/example_inlet_event_extra.py
+[2026-03-01T14:28:09.647+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:28:09.647+0530] {dag.py:3239} INFO - Sync 2 DAGs
+[2026-03-01T14:28:09.661+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:28:09.660+0530] {dag.py:4180} INFO - Setting next_dagrun for read_dataset_event to 2026-02-28 00:00:00+00:00, run_after=2026-03-01 00:00:00+00:00
+[2026-03-01T14:28:09.663+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:28:09.663+0530] {dag.py:4180} INFO - Setting next_dagrun for read_dataset_event_from_classic to 2026-02-28 00:00:00+00:00, run_after=2026-03-01 00:00:00+00:00
+[2026-03-01T14:28:09.679+0530] {processor.py:208} INFO - Processing /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/example_inlet_event_extra.py took 0.058 seconds

@@ -126,3 +126,11 @@
 [2026-03-01T14:27:03.861+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:27:03.861+0530] {dag.py:4180} INFO - Setting next_dagrun for example_xcom_args to None, run_after=None
 [2026-03-01T14:27:03.863+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:27:03.863+0530] {dag.py:4180} INFO - Setting next_dagrun for example_xcom_args_with_operators to None, run_after=None
 [2026-03-01T14:27:03.877+0530] {processor.py:208} INFO - Processing /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/example_xcomargs.py took 0.050 seconds
+[2026-03-01T14:28:29.265+0530] {processor.py:186} INFO - Started process (PID=228552) to work on /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/example_xcomargs.py
+[2026-03-01T14:28:29.266+0530] {processor.py:914} INFO - Processing file /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/example_xcomargs.py for tasks to queue
+[2026-03-01T14:28:29.269+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:28:29.268+0530] {dagbag.py:588} INFO - Filling up the DagBag from /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/example_xcomargs.py
+[2026-03-01T14:28:29.278+0530] {processor.py:925} INFO - DAG(s) 'example_xcom_args', 'example_xcom_args_with_operators' retrieved from /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/example_xcomargs.py
+[2026-03-01T14:28:29.293+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:28:29.293+0530] {dag.py:3239} INFO - Sync 2 DAGs
+[2026-03-01T14:28:29.304+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:28:29.304+0530] {dag.py:4180} INFO - Setting next_dagrun for example_xcom_args to None, run_after=None
+[2026-03-01T14:28:29.306+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:28:29.306+0530] {dag.py:4180} INFO - Setting next_dagrun for example_xcom_args_with_operators to None, run_after=None
+[2026-03-01T14:28:29.323+0530] {processor.py:208} INFO - Processing /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/example_xcomargs.py took 0.063 seconds

@@ -118,7 +118,7 @@ def clean_products(df: DataFrame, translations: DataFrame) -> DataFrame:
     # 4. Translate category names to English
     translations_renamed = translations.withColumnRenamed(
         "product_category_name", "product_category_name_pt"
-    )
+    ).drop("_ingestion_date")
     df = df.join(
         translations_renamed,
         df["product_category_name"] == translations_renamed["product_category_name_pt"],

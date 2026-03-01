@@ -68,3 +68,8 @@
 [2026-03-01T14:26:30.242+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:26:30.242+0530] {dagbag.py:588} INFO - Filling up the DagBag from /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/plugins/decreasing_priority_weight_strategy.py
 [2026-03-01T14:26:30.244+0530] {processor.py:927} WARNING - No viable dags retrieved from /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/plugins/decreasing_priority_weight_strategy.py
 [2026-03-01T14:26:30.250+0530] {processor.py:208} INFO - Processing /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/plugins/decreasing_priority_weight_strategy.py took 0.014 seconds
+[2026-03-01T14:27:55.445+0530] {processor.py:186} INFO - Started process (PID=227651) to work on /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/plugins/decreasing_priority_weight_strategy.py
+[2026-03-01T14:27:55.446+0530] {processor.py:914} INFO - Processing file /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/plugins/decreasing_priority_weight_strategy.py for tasks to queue
+[2026-03-01T14:27:55.449+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:27:55.449+0530] {dagbag.py:588} INFO - Filling up the DagBag from /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/plugins/decreasing_priority_weight_strategy.py
+[2026-03-01T14:27:55.451+0530] {processor.py:927} WARNING - No viable dags retrieved from /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/plugins/decreasing_priority_weight_strategy.py
+[2026-03-01T14:27:55.461+0530] {processor.py:208} INFO - Processing /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/plugins/decreasing_priority_weight_strategy.py took 0.022 seconds
