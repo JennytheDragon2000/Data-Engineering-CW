@@ -18,3 +18,13 @@
 [2026-03-01T14:17:07.912+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:17:07.912+0530] {dagbag.py:588} INFO - Filling up the DagBag from /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/subdags/subdag.py
 [2026-03-01T14:17:07.913+0530] {processor.py:927} WARNING - No viable dags retrieved from /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/subdags/subdag.py
 [2026-03-01T14:17:07.919+0530] {processor.py:208} INFO - Processing /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/subdags/subdag.py took 0.012 seconds
+[2026-03-01T14:17:55.673+0530] {processor.py:186} INFO - Started process (PID=215533) to work on /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/subdags/subdag.py
+[2026-03-01T14:17:55.673+0530] {processor.py:914} INFO - Processing file /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/subdags/subdag.py for tasks to queue
+[2026-03-01T14:17:55.675+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:17:55.674+0530] {dagbag.py:588} INFO - Filling up the DagBag from /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/subdags/subdag.py
+[2026-03-01T14:17:55.676+0530] {processor.py:927} WARNING - No viable dags retrieved from /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/subdags/subdag.py
+[2026-03-01T14:17:55.682+0530] {processor.py:208} INFO - Processing /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/subdags/subdag.py took 0.013 seconds
+[2026-03-01T14:18:57.800+0530] {processor.py:186} INFO - Started process (PID=215873) to work on /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/subdags/subdag.py
+[2026-03-01T14:18:57.801+0530] {processor.py:914} INFO - Processing file /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/subdags/subdag.py for tasks to queue
+[2026-03-01T14:18:57.803+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:18:57.803+0530] {dagbag.py:588} INFO - Filling up the DagBag from /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/subdags/subdag.py
+[2026-03-01T14:18:57.805+0530] {processor.py:927} WARNING - No viable dags retrieved from /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/subdags/subdag.py
+[2026-03-01T14:18:57.811+0530] {processor.py:208} INFO - Processing /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/subdags/subdag.py took 0.016 seconds

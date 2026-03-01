@@ -27,3 +27,10 @@
 [2026-03-01T14:17:09.893+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:17:09.893+0530] {dag.py:3239} INFO - Sync 1 DAGs
 [2026-03-01T14:17:09.909+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:17:09.909+0530] {dag.py:4180} INFO - Setting next_dagrun for example_passing_params_via_test_command to 2026-03-01 08:46:00+00:00, run_after=2026-03-01 08:47:00+00:00
 [2026-03-01T14:17:09.925+0530] {processor.py:208} INFO - Processing /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/example_passing_params_via_test_command.py took 0.062 seconds
+[2026-03-01T14:18:27.903+0530] {processor.py:186} INFO - Started process (PID=215641) to work on /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/example_passing_params_via_test_command.py
+[2026-03-01T14:18:27.904+0530] {processor.py:914} INFO - Processing file /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/example_passing_params_via_test_command.py for tasks to queue
+[2026-03-01T14:18:27.908+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:18:27.907+0530] {dagbag.py:588} INFO - Filling up the DagBag from /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/example_passing_params_via_test_command.py
+[2026-03-01T14:18:27.918+0530] {processor.py:925} INFO - DAG(s) 'example_passing_params_via_test_command' retrieved from /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/example_passing_params_via_test_command.py
+[2026-03-01T14:18:27.980+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:18:27.980+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-01T14:18:27.993+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:18:27.992+0530] {dag.py:4180} INFO - Setting next_dagrun for example_passing_params_via_test_command to 2026-03-01 08:47:00+00:00, run_after=2026-03-01 08:48:00+00:00
+[2026-03-01T14:18:28.008+0530] {processor.py:208} INFO - Processing /home/jenny/.local/lib/python3.13/site-packages/airflow/example_dags/example_passing_params_via_test_command.py took 0.112 seconds

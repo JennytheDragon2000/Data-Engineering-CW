@@ -1,0 +1,15 @@
+[2026-03-01T14:18:56.426+0530] {processor.py:186} INFO - Started process (PID=215849) to work on /home/jenny/Documents/2nd-sem/data-engineering/ecommerce-pipeline/dags/ecommerce_pipeline_dag.py
+[2026-03-01T14:18:56.427+0530] {processor.py:914} INFO - Processing file /home/jenny/Documents/2nd-sem/data-engineering/ecommerce-pipeline/dags/ecommerce_pipeline_dag.py for tasks to queue
+[2026-03-01T14:18:56.428+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:18:56.428+0530] {dagbag.py:588} INFO - Filling up the DagBag from /home/jenny/Documents/2nd-sem/data-engineering/ecommerce-pipeline/dags/ecommerce_pipeline_dag.py
+[2026-03-01T14:18:56.433+0530] {processor.py:925} INFO - DAG(s) 'ecommerce_sales_pipeline' retrieved from /home/jenny/Documents/2nd-sem/data-engineering/ecommerce-pipeline/dags/ecommerce_pipeline_dag.py
+[2026-03-01T14:18:56.504+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:18:56.504+0530] {override.py:1932} INFO - Created Permission View: can edit on DAG:ecommerce_sales_pipeline
+[2026-03-01T14:18:56.531+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:18:56.531+0530] {override.py:1932} INFO - Created Permission View: can delete on DAG:ecommerce_sales_pipeline
+[2026-03-01T14:18:56.545+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:18:56.545+0530] {override.py:1932} INFO - Created Permission View: can read on DAG:ecommerce_sales_pipeline
+[2026-03-01T14:18:56.562+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:18:56.562+0530] {override.py:1932} INFO - Created Permission View: can create on DAG Run:ecommerce_sales_pipeline
+[2026-03-01T14:18:56.590+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:18:56.590+0530] {override.py:1932} INFO - Created Permission View: menu access on DAG Run:ecommerce_sales_pipeline
+[2026-03-01T14:18:56.605+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:18:56.605+0530] {override.py:1932} INFO - Created Permission View: can delete on DAG Run:ecommerce_sales_pipeline
+[2026-03-01T14:18:56.616+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:18:56.616+0530] {override.py:1932} INFO - Created Permission View: can read on DAG Run:ecommerce_sales_pipeline
+[2026-03-01T14:18:56.616+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:18:56.616+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-01T14:18:56.623+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:18:56.623+0530] {dag.py:3262} INFO - Creating ORM DAG for ecommerce_sales_pipeline
+[2026-03-01T14:18:56.628+0530] {logging_mixin.py:190} INFO - [2026-03-01T14:18:56.628+0530] {dag.py:4180} INFO - Setting next_dagrun for ecommerce_sales_pipeline to 2026-03-01 00:00:00+00:00, run_after=2026-03-01 00:00:00+00:00
+[2026-03-01T14:18:56.646+0530] {processor.py:208} INFO - Processing /home/jenny/Documents/2nd-sem/data-engineering/ecommerce-pipeline/dags/ecommerce_pipeline_dag.py took 0.223 seconds
