@@ -1,0 +1,145 @@
+[2026-03-01T14:19:43.730+0530] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-01T14:19:43.737+0530] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ecommerce_sales_pipeline.setup_db scheduled__2026-03-01T00:00:00+00:00 [queued]>
+[2026-03-01T14:19:43.740+0530] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ecommerce_sales_pipeline.setup_db scheduled__2026-03-01T00:00:00+00:00 [queued]>
+[2026-03-01T14:19:43.741+0530] {taskinstance.py:2884} INFO - Starting attempt 1 of 2
+[2026-03-01T14:19:43.754+0530] {taskinstance.py:2907} INFO - Executing <Task(PythonOperator): setup_db> on 2026-03-01 00:00:00+00:00
+[2026-03-01T14:19:43.759+0530] {logging_mixin.py:190} WARNING - /home/jenny/.local/lib/python3.13/site-packages/airflow/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=216526) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-03-01T14:19:43.759+0530] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'ecommerce_sales_pipeline', 'setup_db', 'scheduled__2026-03-01T00:00:00+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/ecommerce_pipeline_dag.py', '--cfg-path', '/tmp/tmpyk5snfzg']
+[2026-03-01T14:19:43.760+0530] {standard_task_runner.py:72} INFO - Started process 216562 to run task
+[2026-03-01T14:19:43.760+0530] {standard_task_runner.py:105} INFO - Job 3: Subtask setup_db
+[2026-03-01T14:19:43.783+0530] {task_command.py:467} INFO - Running <TaskInstance: ecommerce_sales_pipeline.setup_db scheduled__2026-03-01T00:00:00+00:00 [running]> on host fedora
+[2026-03-01T14:19:43.830+0530] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data_engineering' AIRFLOW_CTX_DAG_ID='ecommerce_sales_pipeline' AIRFLOW_CTX_TASK_ID='setup_db' AIRFLOW_CTX_EXECUTION_DATE='2026-03-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-01T00:00:00+00:00'
+[2026-03-01T14:19:43.831+0530] {logging_mixin.py:190} INFO - Task instance is in running state
+[2026-03-01T14:19:43.831+0530] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2026-03-01T14:19:43.831+0530] {logging_mixin.py:190} INFO - Current task name:setup_db state:running start_date:2026-03-01 08:49:43.737981+00:00
+[2026-03-01T14:19:43.831+0530] {logging_mixin.py:190} INFO - Dag name:ecommerce_sales_pipeline and current dag run status:running
+[2026-03-01T14:19:43.831+0530] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-01T14:19:43.838+0530] {taskinstance.py:3336} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/jenny/.local/lib/python3.13/site-packages/airflow/models/taskinstance.py", line 776, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/jenny/.local/lib/python3.13/site-packages/airflow/models/taskinstance.py", line 742, in _execute_callable
+    return ExecutionCallableRunner(
+           ~~~~~~~~~~~~~~~~~~~~~~~~
+    ...<2 lines>...
+        logger=log,
+        ~~~~~~~~~~~
+    ).run(context=context, **execute_callable_kwargs)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jenny/.local/lib/python3.13/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/jenny/.local/lib/python3.13/site-packages/airflow/models/baseoperator.py", line 425, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/jenny/.local/lib/python3.13/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+  File "/home/jenny/.local/lib/python3.13/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jenny/.local/lib/python3.13/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/jenny/Documents/2nd-sem/data-engineering/ecommerce-pipeline/dags/ecommerce_pipeline_dag.py", line 32, in run_db_setup
+    setup_database(cfg)
+    ~~~~~~~~~~~~~~^^^^^
+  File "/home/jenny/Documents/2nd-sem/data-engineering/ecommerce-pipeline/scripts/db_setup.py", line 93, in setup_database
+    conn = psycopg2.connect(
+        host=db["host"],
+    ...<3 lines>...
+        password=db["password"],
+    )
+  File "/home/jenny/.local/lib/python3.13/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: FATAL:  Ident authentication failed for user "postgres"
+
+[2026-03-01T14:19:43.844+0530] {logging_mixin.py:190} INFO - Task instance in failure state
+[2026-03-01T14:19:43.844+0530] {logging_mixin.py:190} INFO - Task start:2026-03-01 08:49:43.737981+00:00 end:2026-03-01 08:49:43.844360+00:00 duration:0.106379
+[2026-03-01T14:19:43.845+0530] {logging_mixin.py:190} INFO - Task:<Task(PythonOperator): setup_db> dag:<DAG: ecommerce_sales_pipeline> dagrun:<DagRun ecommerce_sales_pipeline @ 2026-03-01 00:00:00+00:00: scheduled__2026-03-01T00:00:00+00:00, state:running, queued_at: 2026-03-01 08:49:41.491237+00:00. externally triggered: False>
+[2026-03-01T14:19:43.845+0530] {logging_mixin.py:190} INFO - Failure caused by connection to server at "localhost" (::1), port 5432 failed: FATAL:  Ident authentication failed for user "postgres"
+[2026-03-01T14:19:43.845+0530] {taskinstance.py:1242} INFO - Marking task as UP_FOR_RETRY. dag_id=ecommerce_sales_pipeline, task_id=setup_db, run_id=scheduled__2026-03-01T00:00:00+00:00, execution_date=20260301T000000, start_date=20260301T084943, end_date=20260301T084943
+[2026-03-01T14:19:43.864+0530] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-01T14:19:43.864+0530] {standard_task_runner.py:124} ERROR - Failed to execute job 3 for task setup_db (connection to server at "localhost" (::1), port 5432 failed: FATAL:  Ident authentication failed for user "postgres"
+; 216562)
+Traceback (most recent call last):
+  File "/home/jenny/.local/lib/python3.13/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+  File "/home/jenny/.local/lib/python3.13/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+  File "/home/jenny/.local/lib/python3.13/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+  File "/home/jenny/.local/lib/python3.13/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+  File "/home/jenny/.local/lib/python3.13/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+  File "/home/jenny/.local/lib/python3.13/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ~~~~~~~~~~~~~~~~^
+        mark_success=args.mark_success,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        job_id=args.job_id,
+        ^^^^^^^^^^^^^^^^^^^
+        pool=args.pool,
+        ^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/jenny/.local/lib/python3.13/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/jenny/.local/lib/python3.13/site-packages/airflow/models/taskinstance.py", line 3029, in _run_raw_task
+    return _run_raw_task(
+        ti=self,
+    ...<5 lines>...
+        session=session,
+    )
+  File "/home/jenny/.local/lib/python3.13/site-packages/airflow/models/taskinstance.py", line 282, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self=ti,  # type: ignore[arg-type]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        session=session,
+        ^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/jenny/.local/lib/python3.13/site-packages/airflow/models/taskinstance.py", line 3184, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+  File "/home/jenny/.local/lib/python3.13/site-packages/airflow/models/taskinstance.py", line 3208, in _execute_task
+    return _execute_task(self, context, task_orig)
+  File "/home/jenny/.local/lib/python3.13/site-packages/airflow/models/taskinstance.py", line 776, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/jenny/.local/lib/python3.13/site-packages/airflow/models/taskinstance.py", line 742, in _execute_callable
+    return ExecutionCallableRunner(
+           ~~~~~~~~~~~~~~~~~~~~~~~~
+    ...<2 lines>...
+        logger=log,
+        ~~~~~~~~~~~
+    ).run(context=context, **execute_callable_kwargs)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jenny/.local/lib/python3.13/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/jenny/.local/lib/python3.13/site-packages/airflow/models/baseoperator.py", line 425, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/jenny/.local/lib/python3.13/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+  File "/home/jenny/.local/lib/python3.13/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jenny/.local/lib/python3.13/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/jenny/Documents/2nd-sem/data-engineering/ecommerce-pipeline/dags/ecommerce_pipeline_dag.py", line 32, in run_db_setup
+    setup_database(cfg)
+    ~~~~~~~~~~~~~~^^^^^
+  File "/home/jenny/Documents/2nd-sem/data-engineering/ecommerce-pipeline/scripts/db_setup.py", line 93, in setup_database
+    conn = psycopg2.connect(
+        host=db["host"],
+    ...<3 lines>...
+        password=db["password"],
+    )
+  File "/home/jenny/.local/lib/python3.13/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: FATAL:  Ident authentication failed for user "postgres"
+
+[2026-03-01T14:19:43.892+0530] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2026-03-01T14:19:43.911+0530] {taskinstance.py:3924} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-03-01T14:19:43.912+0530] {local_task_job_runner.py:245} INFO - ::endgroup::
